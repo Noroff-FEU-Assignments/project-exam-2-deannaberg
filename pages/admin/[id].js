@@ -30,26 +30,26 @@ export default function EditProduct() {
                 }
             }
             getProduct();
-        }, []),
+        }, []);
 
-        async function onSubmit(data) {
-            setUpdatingProduct(true);
-            setUpdateError(null);
-            setUpdated(false);
+    async function onSubmit(data) {
+        setUpdatingProduct(true);
+        setUpdateError(null);
+        setUpdated(false);
 
-            console.log(data);
+        console.log(data);
 
-            try {
-                const response = await http.put(url, data);
-                console.log("response", response.data);
-                setUpdated(true);
-            } catch (error) {
-                console.log("error", error);
-                setUpdateError(error.toString());
-            } finally {
-                setUpdatingProduct(false);
-            }
+        try {
+            const response = await http.put(url, data);
+            console.log("response", response.data);
+            setUpdated(true);
+        } catch (error) {
+            console.log("error", error);
+            setUpdateError(error.toString());
+        } finally {
+            setUpdatingProduct(false);
         }
+    }
 
     if (fetchingProduct) return <div>Loading...</div>;
     if (fetchError) return <div>Error loading product</div>;
