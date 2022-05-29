@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
 import { Form, Button, Container } from 'react-bootstrap';
@@ -14,13 +14,12 @@ export default function EditProduct() {
 
     const { register, handleSubmit } = useForm();
 
+    const http = useAxios();
+    let { id } = useParams();
+    const url = `/wc/v2/products/${id}?${WOO_COMMERCE_KEY}&${WOO_COMMERCE_SECRET}`;
+
     useEffect(
         function () {
-
-            const http = useAxios();
-            let { id } = useParams();
-            const url = `/wc/v2/products/${id}?${WOO_COMMERCE_KEY}&${WOO_COMMERCE_SECRET}`;
-
             async function getProduct() {
                 try {
                     const response = await http.get(url);
