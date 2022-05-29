@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Navbar, Nav, Container, Row, Col } from 'react-bootstrap';
 import Search from '..//forms/Search';
 import style from '../../styles/Header.module.scss';
+import Image from 'next/image';
 
 
 
@@ -15,7 +16,7 @@ export default function Header() {
                         <i className="bi bi-instagram h5 text-primary"></i>
                     </Col>
                     <Col xs={6} md={true} className="me-auto">
-                        <Link href="/" passHref><Navbar.Brand><img className="img-fluid" src="/logo.svg" alt="" /></Navbar.Brand></Link>
+                        <Link href="/" passHref><Navbar.Brand><Image className="img-fluid" src="/logo.svg" alt="JTB Distributors Logo" width={300} height={166.84} /></Navbar.Brand></Link>
                     </Col>
                     <Col xs={true} className="me-auto d-flex justify-content-end">
                         <address><i className="bi bi-telephone-fill h5 me-3 text-primary"></i></address>

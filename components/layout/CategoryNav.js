@@ -6,11 +6,12 @@ import { BASE_URL, WOO_COMMERCE_KEY, WOO_COMMERCE_SECRET } from '../../constants
 
 export default function CategoryNav() {
 
-    const url = `${BASE_URL}/wc/v2/products/categories?${WOO_COMMERCE_KEY}&${WOO_COMMERCE_SECRET}`;
+
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
         const getCategories = async () => {
+            const url = `${BASE_URL}/wc/v2/products/categories?${WOO_COMMERCE_KEY}&${WOO_COMMERCE_SECRET}`;
             try {
                 let response = await axios.get(url);
                 setCategories(response.data);
@@ -27,7 +28,7 @@ export default function CategoryNav() {
             <ButtonGroup vertical>
                 {categories.map((data) => {
                     return (
-                        <Button className="w-100">{data.name}</Button>
+                        <Button key={data.id} className="w-100">{data.name}</Button>
                     )
                 })}
             </ButtonGroup>

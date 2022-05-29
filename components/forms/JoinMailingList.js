@@ -1,7 +1,8 @@
 import { Container, Col, Row, Form, Button, Stack } from 'react-bootstrap';
+
 export default function JoinMailingList() {
     return (
-        <Container fluid className=" bg-secondary">
+        <Container fluid className="bg-secondary">
             <Container className="py-5">
                 <Row className="d-flex justify-content-between">
                     <Col className="mb-3">
@@ -11,7 +12,7 @@ export default function JoinMailingList() {
                         <Form className="d-flex justify-content-center">
                             <Form.Group className="mb-3" controlId="joinMailingListEmail">
                                 <Stack className="mb-2" direction="horizontal" gap={2}>
-                                    <Form.Label className="visually-hidden" >Your email address</Form.Label>
+                                    <Form.Label className="visually-hidden">Your email address</Form.Label>
                                     <Form.Control className="me-auto" type="email" placeholder="Your email address" />
                                     <Button type="submit">Join!</Button>
                                 </Stack>
@@ -25,4 +26,4 @@ export default function JoinMailingList() {
             </Container>
         </Container>
     )
-}
+};

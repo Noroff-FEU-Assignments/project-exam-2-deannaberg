@@ -1,35 +1,26 @@
 import { useState, useEffect } from "react";
 import { useParams } from 'react-router-dom';
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
 import { Form, Button, Container } from 'react-bootstrap';
 import { WOO_COMMERCE_KEY, WOO_COMMERCE_SECRET } from '../../constants/api';
 import useAxios from '../../hooks/useAxios';
-
-
-const schema = yup.object().shape({
-    title: yup.string().required("Title is required"),
-});
 
 export default function EditProduct() {
     const [product, setProduct] = useState(null);
     const [updated, setUpdated] = useState(false);
     const [fetchingProduct, setFetchingProduct] = useState(true);
     const [updatingProduct, setUpdatingProduct] = useState(false);
-    //const [fetchError, setFetchError] = useState(null);
-    //const [updateError, setUpdateError] = useState(null);
 
-    const { register, handleSubmit, errors } = useForm({
-        resolver: yupResolver(schema),
-    });
 
-    const http = useAxios();
-    let { id } = useParams();
-    const url = `/wc/v2/products/${id}?${WOO_COMMERCE_KEY}&${WOO_COMMERCE_SECRET}`;
+    const { register, handleSubmit } = useForm();
 
     useEffect(
         function () {
+
+            const http = useAxios();
+            let { id } = useParams();
+            const url = `/wc/v2/products/${id}?${WOO_COMMERCE_KEY}&${WOO_COMMERCE_SECRET}`;
+
             async function getProduct() {
                 try {
                     const response = await http.get(url);
@@ -71,7 +62,7 @@ export default function EditProduct() {
                 <fieldset disabled={updatingProduct}>
                     <Form.Group className="mb-3" controlId="title">
                         <Form.Control name="title" defaultValue={product.title.rendered} placeholder="Title" {...register("title")} />
-                        {errors.title && <FormError>{errors.title.message}</FormError>}
+
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="description">
                         <Form.Control className="bg-white" as="textarea" defaultValue={product.description} {...register("description")} />

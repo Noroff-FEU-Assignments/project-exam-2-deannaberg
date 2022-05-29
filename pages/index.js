@@ -9,7 +9,7 @@ export default function Home() {
         <Container className="text-center p-5">
           <h1 className="display-4 display-md-3 d-flex flex-column"><span className="mb-4">Your one-stop-shop for
             commercial  frozen dessert
-            equipment and service</span><span className="fs-4">Gelato<i class="text-muted p-2 fs-6 bi bi-circle-fill"></i>Ice Cream<i class="text-muted p-2 fs-6 bi bi-circle-fill"></i>Frozen Yogurt<i class="text-muted p-2 fs-6 bi bi-circle-fill"></i>Whipped Topping<i class="text-muted p-2 fs-6 bi bi-circle-fill"></i>Slush<i class="text-muted p-2 fs-6 bi bi-circle-fill"></i>Custard</span></h1>
+            equipment and service</span><span className="fs-4">Gelato<i className="text-muted p-2 fs-6 bi bi-circle-fill"></i>Ice Cream<i className="text-muted p-2 fs-6 bi bi-circle-fill"></i>Frozen Yogurt<i className="text-muted p-2 fs-6 bi bi-circle-fill"></i>Whipped Topping<i className="text-muted p-2 fs-6 bi bi-circle-fill"></i>Slush<i className="text-muted p-2 fs-6 bi bi-circle-fill"></i>Custard</span></h1>
         </Container>
       </Container>
       <section className="mb-5">

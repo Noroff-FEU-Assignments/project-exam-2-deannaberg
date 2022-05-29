@@ -9,7 +9,7 @@ export default function Footer() {
             <Container className="py-5">
                 <Row>
                     <Col md={6} className="col-auto me-auto mb-3">
-                        <Link href="/"><h2 className="text-white">JTB Distributors</h2></Link>
+                        <Link href="/" passHref><Nav.Link><h2 className="text-white">JTB Distributors</h2></Nav.Link></Link>
                         <p className="h4 text-white">Providing quality frozen dessert equipment, service, and training since 1991.</p>
                         <div><i className="h4 bi bi-facebook me-2 text-white"></i>
                             <i className="h4 bi bi-instagram text-white"></i></div>

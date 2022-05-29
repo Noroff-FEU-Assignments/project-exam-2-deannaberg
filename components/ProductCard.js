@@ -4,7 +4,7 @@ export default function ProductCard({ machines }) {
     return (<>
         {props.machines.map((data) => {
             return (
-                <Card className="border-0 bg-transparent" style={{ width: '12rem' }}>
+                <Card className="border-0 bg-transparent" style={{ width: '12rem' }} key={data.id}>
                     <a href="">
                         <Card.Img className="shadow-sm border-0" variant="top" style={{ width: '100%', height: '10rem' }} src="holder.js/100px180" />
                         <Card.Body className="px-0">
