@@ -17,7 +17,7 @@ export default function Header() {
                     <Col xs={6} md={true} className="me-auto">
                         <Link href="/" passHref><Navbar.Brand><img className="img-fluid" src="/logo.svg" alt="" /></Navbar.Brand></Link>
                     </Col>
-                    <Col xs={true} className="me-auto d-flex">
+                    <Col xs={true} className="me-auto d-flex justify-content-end">
                         <address><i className="bi bi-telephone-fill h5 me-3 text-primary"></i></address>
                         <address><i className="bi bi-envelope-fill h5 text-primary"></i></address>
                     </Col>

@@ -1,12 +1,24 @@
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { BASE_URL, WOO_COMMERCE_KEY, WOO_COMMERCE_SECRET } from '../../constants/api';
 import axios from 'axios';
+import AuthContext from '../../context/AuthContext';
+import { useContext } from 'react';
+import { useRouter } from 'next/router';
+
 
 
 export default function Dashboard(props) {
+    const router = useRouter();
+    const [, setAuth] = useContext(AuthContext);
+
+    function logout() {
+        setAuth(null);
+        router.push('/');
+    }
     return (
         <Container>
             <h1 className="display-6 py-3 px-0">Dashboard</h1>
+            <Button onClick={logout}>Logout</Button>
             <Row className="w-100 h-auto d-flex">
                 <Col md={2}>
 
