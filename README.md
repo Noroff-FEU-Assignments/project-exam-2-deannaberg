@@ -30,7 +30,7 @@ The website uses Wordpress for content management and JWT authorization.
 1. Clone the repo:
 
 ```bash
-git clone git@github.com:NoroffFEU/portfolio-1-example.git
+git clone git@github.com:NoroffFEU/project-exam-2-deannaberg.git
 ```
 
 2. Install the dependencies:
