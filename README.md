@@ -1,17 +1,16 @@
-# Your project title
+# Project Exam 2
 
 ![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
 
-JTB Distributors is an ecommerce website with customer-facing and admin sections.  
+JTB Distributors is an e-commerce website for a company that sells and services frozen dessert equipment. The website includes both customer-facing and admin sections.  
 
 ## Description
-This website is a headless Wordpress, e-commerce site built with Next.js.   
-- Return an array of items with 2 properties
-- Link to a detail page for each item and display 3 properties
-- Create a contact form with validation
-- Create an Admin log-in form that makes a log-in request to Wordpress API with a JWT plugin installed.
-- Upon successfully logging-in, user is redirected to a user admin route. 
-- If log-in is unsuccessful, a message is displayed. 
+- The customer facing side includes a Home, Services, About, Equipment, Equipment Detail, Blog, Shop, and Contact Pages.
+Together these pages provide potential customers with information about JTB Distributors' services, equipment; and allows them to purchase parts, and machines on consignment. 
+
+- The admin side includes a log-in page, and a landing dashboard with one section to update, edit, and delete products; and another section to view messages submitted through the contact and quote request forms.
+
+The website uses Wordpress for content management and JWT authorization. 
 
 ## Built With
 - [Next.js](https://nextjs.org)
@@ -22,6 +21,7 @@ This website is a headless Wordpress, e-commerce site built with Next.js.
 - [Axios](https://axios-http.com/)
 - [React Router](https://v5.reactrouter.com/web/guides/quick-start)
 - [React Multi Carousel](https://react-multi-carousel.vercel.app/)
+- [Wordpress](https://wordpress.org)
 
 ## Getting Started
 
