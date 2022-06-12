@@ -1,6 +1,6 @@
 # Project Exam 2
 
-![image](https://user-images.githubusercontent.com/52622303/164316813-4b12d99f-aeb7-4069-85cf-e72b3a50ac99.png)
+![image](https://user-images.githubusercontent.com/71320357/173251423-2ea84dda-fde0-4f59-b5a8-23d1961bb385.png)
 
 JTB Distributors is an e-commerce website for a company that sells and services frozen dessert equipment. The website includes both customer-facing and admin sections.  
 
