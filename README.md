@@ -17,7 +17,7 @@ The website uses Wordpress for content management and JWT authorization.
 - [Bootstrap](https://getbootstrap.com)
 - [React-Bootstrap](https://react-bootstrap.github.io/)
 - [React-Hook-Form](https://react-hook-form.com/)
-- [Bootstrap-Icons](https://momentjs.com/](https://icons.getbootstrap.com/)
+- [Bootstrap-Icons](https://icons.getbootstrap.com/)
 - [Axios](https://axios-http.com/)
 - [React Router](https://v5.reactrouter.com/web/guides/quick-start)
 - [React Multi Carousel](https://react-multi-carousel.vercel.app/)
